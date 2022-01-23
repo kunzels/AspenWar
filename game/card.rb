@@ -5,3 +5,5 @@ class Card
         @suit = suit
         @card = cost + suit
     end
+
+end
