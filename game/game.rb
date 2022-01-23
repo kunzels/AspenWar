@@ -33,16 +33,17 @@ class Game
 
     def turn(currCard1, currCard2, pile = nil)
         pile ||= [currCard1, currCard2]
-        value1 = currCard1.cost
-        value2 = currCard2.cost
-        @result << "#{@player1[0]} has played #{currCard1.showCard(currCard1)}"
-        @result << "#{@player2[0]} has played #{currCard2.showCard(currCard2)}"
+        @result << "#{@player1[0]} has played #{currCard1.cost} of #{currCard1.suit}"
+        @result << "#{@player2[0]} has played #{currCard2.cost} of #{currCard2.suit}"
+        checker(currCard1, currCard2, pile)
+    end
+
+    def checker(currCard1, currCard2, pile)
         checker = ["A", "K", "Q", "J", "1", "9", "8", "7","6","5","4","3","2"]
-        if 
-        if(value1 == value2)
+        if(currCard1.cost == currCard2.cost)
             superWar(currCard1, currCard2, pile)
         else
-            if(checker.index(value1) < checker.index(value2)) 
+            if(checker.index(currCard1.cost) < checker.index(currCard2.cost)) 
                 @deck.p1Discard += pile 
                 @result << "#{@player1[0]} takes #{pile.length} cards!"
             else

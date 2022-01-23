@@ -3,7 +3,7 @@ require_relative "deck.rb"
 require_relative "game.rb"
 require 'byebug'
 class Start
-    attr_reader :list, :game, :listPlayers, :play
+    attr_reader  :listPlayers, :play
     def initialize()
         @list = []
         @warData = WarDatabase.new()
