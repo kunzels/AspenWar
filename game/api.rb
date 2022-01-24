@@ -29,6 +29,7 @@ class Api
     response.finish
   }
 
-  Rack::Handler::Puma.run(app, :Port => process.env.PORT, :Verbose => true)
+  Rack::Handler::Puma.run(app, :Port => process.env.port, :Verbose => true)
+  debugger
 end
 Api.new()
