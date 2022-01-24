@@ -22,7 +22,7 @@ A basic ruby implementation of the card game War. This project was created in ru
 A working docker image has been included. This should enable you to run the image without any need for a ruby installation. Assuming you have docker setup, follow these steps.
 Repo: https://hub.docker.com/repository/docker/kunzels/war/general
 1. Docker pull kunzels/war
-2. docker run -itp 8089:1337 kunzels/war:latest
+2. docker run -itp 8080:1337 kunzels/war:latest
 3. You might have to do -it -p 8080:133
 4. Check http://localhost:8080/wins and http://localhost:8080/play
 
