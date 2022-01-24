@@ -1,7 +1,7 @@
 
 <h1> War </h1>
 
-A small command-line program designed to simulate games of the popular card game War. The project was created in ruby version 2.5.1p57, and requires ruby version >= 2.4.0. It utilizes sqlite3 as a simple database. There is some light testing added utilizing rspec.
+A small command-line program designed to simulate games of the popular card game War. The project was created in ruby version 2.7.2. It utilizes sqlite3 as a simple database. There is some light testing added utilizing rspec.
 
 <h1> Goals for this project </h1>
 
@@ -13,7 +13,7 @@ A small command-line program designed to simulate games of the popular card game
 <h1> To setup and run </h1>
 
 1. Navigate to the war folder in the terminal.
-2. Ensure ruby version 2.4.0 or higher is installed.
+2. Ensure ruby version 2.7.2 or higher is installed.
 3. Run bundle install in the console to install relevant gems.
 4. Run ruby ./game/api.rb
 5. Open a browser and navigate to http://localhost:1337/wins or http://localhost:1337/play
@@ -23,9 +23,6 @@ A small command-line program designed to simulate games of the popular card game
 1. Navigate to the war folder in the terminal.
 2. Ensure setup from the above section is complete.
 4. Run bundle exec rspec in the terminal.
-
-If you would like to look into the code behind ruby's shuffle implementation, this is a good start!
-https://hashrocket.com/blog/posts/do-the-shuffle
 
 
 Ruby installation documentation.   
@@ -39,3 +36,6 @@ Byebug is included. This would be removed on a production build, but it is inclu
 
 Some light tests were implemented using Rspec. No ruby version requirement.
 * https://rspec.info/documentation/3.10/rspec-core/
+
+Rack and puma are used for the local endpoints, documentation is found here. 
+* https://www.rubydoc.info/github/rack/rack/

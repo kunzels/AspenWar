@@ -74,14 +74,5 @@ RSpec.describe Deck do
     end
 end
 
-RSpec.describe Game do
-    subject(:start) {Start.new()}
-    describe "#turn" do
-        it "sshould choose a pile if there is one, or create a pile if there is not." do
-            start.game.turn("4c","10c", ["5c","10c"])
-            expect(game.pile).to eq(52)
-        end
-    end
-end
 
 

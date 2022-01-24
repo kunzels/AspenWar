@@ -24,7 +24,7 @@ class Game
             elsif(@deck.totalCards == 0)
                 endGame(@player2)
             else
-                # pulls a card and runs the turn function
+                # Pulls a card and runs the turn function
                 currCard1 = @deck.p1Deck.pop
                 currCard2 = @deck.p2Deck.pop
                 turn(currCard1, currCard2)
@@ -41,7 +41,7 @@ class Game
     end
 
     def checker(currCard1, currCard2, pile)
-        #checks if the cards have the same value, running superwar, or different values, verifying the winner. 
+        # Checks if the cards have the same value, running superwar, or different values, verifying the winner. 
         checker = ["A", "K", "Q", "J", "10", "9", "8", "7","6","5","4","3","2"]
         if(currCard1.cost == currCard2.cost)
             superWar(currCard1, currCard2, pile)
@@ -58,7 +58,7 @@ class Game
     end
 
     def superWar(currCard1, currCard2, pile = nil)
-        #Checks that there are cards left to deal before dealing a face down card, and then another card. 
+        # Checks that there are cards left to deal before dealing a face down card, and then another card. 
         @result << "A super war has been triggered!"
         pile ||= [currCard1, currCard2]
         first = currCard1
