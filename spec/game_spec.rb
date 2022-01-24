@@ -48,9 +48,9 @@ RSpec.describe Deck do
             end
     end
     describe "#shuffleCheck" do
-        it "should pull up on this test" do
+        it "should pass discards to deck on shuffle" do
             deck.p1Discard = deck.p1Deck
-            held = deck.p1Deck
+            held = deck.p1Deck.clone
             deck.p1Deck = []
             deck.shuffleCheck()
             expect(deck.p1Deck.length).to eq(held.length)
@@ -58,10 +58,15 @@ RSpec.describe Deck do
         # could use more logic
         it "should shuffle the cards" do
             deck.p1Discard = deck.p1Deck
-            held = deck.p1Deck
+            held = deck.p1Deck.clone
             deck.p1Deck = []
             deck.shuffleCheck()
             expect(deck.p1Deck).to_not eq(held)
+        end
+        it "Should not shuffle if the draw deck is not empty" do
+            held = deck.p1Deck.clone
+            deck.shuffleCheck()
+            expect(held).to eq(deck.p1Deck)
         end
     end
 end

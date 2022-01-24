@@ -15,7 +15,8 @@ A small command-line program designed to simulate games of the popular card game
 1. Navigate to the war folder in the terminal.
 2. Ensure ruby version 2.4.0 or higher is installed.
 3. Run bundle install in the console to install relevant gems.
-4. Run ruby ./game/game.rb
+4. Run ruby ./game/api.rb
+5. Open a browser and navigate to http://localhost:1337/wins or http://localhost:1337/play
 
 <h1> To run tests </h1>
 
