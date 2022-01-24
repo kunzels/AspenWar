@@ -2,6 +2,9 @@ require 'rspec'
 require_relative '../game/card.rb'
 require_relative '../game/player.rb'
 require_relative '../game/deck.rb'
+require_relative '../game/game.rb'
+require_relative '../game/start.rb'
+
 
 RSpec.describe Card do
     subject(:card) {Card.new("10","C")}
@@ -69,14 +72,16 @@ RSpec.describe Deck do
             expect(held).to eq(deck.p1Deck)
         end
     end
+end
 
-    RSpec.describe Game do
-    subject(:game) {Game.new()}
-    describe '#initialize' do
-            it "should create a 52 card deck" do
-                expect(deck.deck.length).to eq(52)
-            end
+RSpec.describe Game do
+    subject(:start) {Start.new()}
+    describe "#turn" do
+        it "sshould choose a pile if there is one, or create a pile if there is not." do
+            start.game.turn("4c","10c", ["5c","10c"])
+            expect(game.pile).to eq(52)
         end
     end
 end
+
 

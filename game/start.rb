@@ -3,7 +3,7 @@ require_relative "deck.rb"
 require_relative "game.rb"
 
 class Start
-    attr_reader  :listPlayers, :play
+    attr_reader  :listPlayers, :play, :game
     def initialize()
         @list = []
         @warData = WarDatabase.new()
@@ -12,6 +12,7 @@ class Start
         @pick = nil
         @player1 = nil
         @player2 = nil
+        @game = nil
     end
 
     def play()
