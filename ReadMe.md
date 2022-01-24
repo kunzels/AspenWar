@@ -24,7 +24,7 @@ Repo: https://hub.docker.com/repository/docker/kunzels/war/general
 
 1. Docker pull kunzels/war
 2. docker run -itp 8080:1337 kunzels/war:latest
-3. You might have to do -it -p 8080:133
+3. If this fails, try docker run -it -p 8080:1337 kunzels/war:latest
 4. Check http://localhost:8080/wins and http://localhost:8080/play
 
 <h1> To run tests </h1>
