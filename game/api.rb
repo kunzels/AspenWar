@@ -29,6 +29,6 @@ class Api
     response.finish
   }
 
-  Rack::Handler::Puma.run(app, :Port => 1337, :Verbose => true)
+  Rack::Handler::Puma.run(app)
 end
 Api.new()
