@@ -1,6 +1,4 @@
-require 'byebug'
 require 'sqlite3'
-
 
 class WarDatabase
     attr_reader :db

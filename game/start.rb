@@ -1,7 +1,7 @@
 require_relative "../database/warDatabase"
 require_relative "deck.rb"
 require_relative "game.rb"
-require 'byebug'
+
 class Start
     attr_reader  :listPlayers, :play
     def initialize()

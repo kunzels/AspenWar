@@ -69,5 +69,14 @@ RSpec.describe Deck do
             expect(held).to eq(deck.p1Deck)
         end
     end
+
+    RSpec.describe Game do
+    subject(:game) {Game.new()}
+    describe '#initialize' do
+            it "should create a 52 card deck" do
+                expect(deck.deck.length).to eq(52)
+            end
+        end
+    end
 end
 

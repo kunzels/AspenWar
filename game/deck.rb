@@ -1,5 +1,4 @@
 require_relative 'card.rb'
-require 'byebug'
 
 class Deck
     attr_reader :deck, :shuffleCheck, :p1Deck, :p2Deck, :totalCards

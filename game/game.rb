@@ -1,7 +1,6 @@
-require 'byebug'
 require 'sqlite3'
-
 require_relative "../database/warDatabase"
+
 class Game 
     attr_reader :result, :checker
 

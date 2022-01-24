@@ -34,7 +34,7 @@ Ruby installation documentation.
 Sqlite3 documentation, specific to ruby. Some more references are linked here as well. Ruby version >= 1.8.7 is required.
 * https://rubydoc.info/gems/sqlite3/1.3.8/frames
 
-Byebug is included. This would be removed on a production build, but it is included if you'd like to use it. Simply place debugger on a line. See documentation here. Ruby version >= 2.4.0 is required.
+Byebug is included. This would be removed on a production build, but it is included if you'd like to use it. Simply require 'byebug' at the top of a file, and then place debugger on a line. See documentation here. Ruby version >= 2.4.0 is required.
 * https://github.com/deivid-rodriguez/byebug
 
 Some light tests were implemented using Rspec. No ruby version requirement.
