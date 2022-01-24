@@ -3,7 +3,7 @@ require 'sqlite3'
 
 require_relative "../database/warDatabase"
 class Game 
-    attr_reader :result
+    attr_reader :result, :checker
 
     def initialize(list, wardata, deck, player1, player2)
         @list = list
@@ -33,13 +33,13 @@ class Game
 
     def turn(currCard1, currCard2, pile = nil)
         pile ||= [currCard1, currCard2]
-        @result << "#{@player1[0]} has played #{currCard1.cost} of #{currCard1.suit}"
-        @result << "#{@player2[0]} has played #{currCard2.cost} of #{currCard2.suit}"
+        @result << "#{@player1[0]} has played the #{currCard1.cost} of #{currCard1.suit}"
+        @result << "#{@player2[0]} has played the #{currCard2.cost} of #{currCard2.suit}"
         checker(currCard1, currCard2, pile)
     end
 
     def checker(currCard1, currCard2, pile)
-        checker = ["A", "K", "Q", "J", "1", "9", "8", "7","6","5","4","3","2"]
+        checker = ["A", "K", "Q", "J", "10", "9", "8", "7","6","5","4","3","2"]
         if(currCard1.cost == currCard2.cost)
             superWar(currCard1, currCard2, pile)
         else

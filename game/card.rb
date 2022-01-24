@@ -3,7 +3,5 @@ class Card
     def initialize(cost, suit)
         @cost = cost
         @suit = suit
-        @card = cost + suit
     end
-
 end

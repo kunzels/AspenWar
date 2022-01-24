@@ -3,7 +3,7 @@ require 'byebug'
 
 class Deck
     attr_reader :deck, :shuffleCheck, :p1Deck, :p2Deck, :totalCards
-    attr_accessor :p1Discard, :p2Discard
+    attr_accessor :p1Discard, :p2Discard, :p1Deck, :p1Discard
     def initialize()
             @p1Deck = []
             @p2Deck = []
@@ -15,7 +15,8 @@ class Deck
                     "2d", "3d","4d","5d","6d","7d","8d","9d","10d","Jd","Qd","Kd","Ad",
                     "2h", "3h","4h","5h","6h","7h","8h","9h","10h","Jh","Qh","Kh","Ah"]
             cards.each do |card|
-                @deck << Card.new(card[0], card[1])
+                formatter = {"d" => "Diamonds", "c" => "Clubs", "h" => "Hearts", "s" => "Spades"}
+                @deck << Card.new(card[0..-2], formatter[card[-1]])
             end
             @deck = @deck.shuffle!
             @p1Deck = @deck[0..25]
