@@ -2,11 +2,8 @@
 require_relative "start.rb"
 require 'rack'
 require 'rack/handler/puma'
-require 'byebug'
-
 
 class Api 
-    debugger
   app = -> environment {
     request = Rack::Request.new(environment)
     response = Rack::Response.new
@@ -32,7 +29,6 @@ class Api
     response.finish
   }
 
-  Rack::Handler::Puma.run(app)
-  debugger
+  Rack::Handler::Puma.run(app, :Port => 1337, :Verbose => true)
 end
 Api.new()
