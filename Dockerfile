@@ -10,4 +10,4 @@ RUN bundle install
 
 COPY . .
 EXPOSE 1337
-CMD ["./game/api.rb"]
+CMD ["ruby","./game/api.rb"]

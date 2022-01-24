@@ -18,6 +18,9 @@ A small command-line program designed to simulate games of the popular card game
 4. Run ruby ./game/api.rb
 5. Open a browser and navigate to http://localhost:1337/wins or http://localhost:1337/play
 
+<h1> Docker Alternative </h1>
+A working docker image has been included. Assuming docker is set up, you should be able to enter the command 'docker run -it -p 8080:1337 war:latest' to run, and then check http://localhost:8080/wins and http://localhost:8080/play
+
 <h1> To run tests </h1>
 
 1. Navigate to the war folder in the terminal.
