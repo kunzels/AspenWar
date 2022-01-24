@@ -1,7 +1,7 @@
 
 <h1> War </h1>
 
-A small command-line program designed to simulate games of the popular card game War. The project was created in ruby version 2.7.2. It utilizes sqlite3 as a simple database. There is some light testing added utilizing rspec.
+A basic ruby implementation of the card game War. This project was created in ruby version 2.7.2. It utilizes sqlite3 as a simple database, and there is some light testing added utilizing rspec. A docker image has been created to run this program without the need for language installations. 
 
 <h1> Goals for this project </h1>
 
